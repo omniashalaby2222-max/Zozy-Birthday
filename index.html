@@ -2,49 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy Birthday Zozy 💙</title>
+<title>A Small Story For You 💙</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="stars"></div>
+<div id="hearts"></div>
 <div id="fireworks"></div>
 
-<!-- INTRO -->
+<!-- SCENE 1 -->
 <section class="screen active">
-  <h1>ZOZY 💙</h1>
-  <p>Six birthdays. One love. Infinite memories.</p>
-  <button onclick="nextScreen()">Begin Experience</button>
+  <h1>Hey you 💙</h1>
+  <p>This is not just a birthday page…</p>
+  <button onclick="nextScreen()">Start</button>
 </section>
 
-<!-- NAME -->
+<!-- SCENE 2 -->
 <section class="screen">
-  <h2>Enter your name 💌</h2>
-  <input id="name" placeholder="Type your name">
-  <button onclick="openExperience()">Open</button>
-</section>
-
-<!-- MESSAGE -->
-<section class="screen">
-  <h1 id="title"></h1>
-
-  <p class="fade">Since 17/01/2021...</p>
-  <p class="fade delay1">Every moment became a memory.</p>
-  <p class="fade delay2">And every memory became love.</p>
-
+  <h2>I just wanted to tell you something...</h2>
+  <p>Some people come and change the meaning of days.</p>
   <button onclick="nextScreen()">Continue</button>
 </section>
 
-<!-- CAKE -->
+<!-- SCENE 3 -->
 <section class="screen">
-  <div class="cake">
-    <div class="candle"></div>
-    <div class="flame"></div>
-  </div>
+  <h2>Since 17/01/2021 💫</h2>
+  <p>Everything started to feel different.</p>
+  <p>You became my calm in chaos.</p>
+  <button onclick="nextScreen()">Keep going</button>
+</section>
 
+<!-- SCENE 4 -->
+<section class="screen">
+  <h2>And honestly...</h2>
+  <p>You are not just a memory.</p>
+  <p>You are my favorite feeling.</p>
+  <button onclick="nextScreen()">...</button>
+</section>
+
+<!-- SCENE 5 -->
+<section class="screen">
   <h2>Make a wish 💙</h2>
-  <button onclick="fireworks()">Blow Candle 🎆</button>
+  <p>Close your eyes for a second...</p>
+  <button onclick="fireworks(); hearts(); nextScreen()">Open your wish 🎆</button>
+</section>
+
+<!-- FINAL -->
+<section class="screen">
+  <h1>I hope you smile today 💙</h1>
+  <p>And every day after this one.</p>
+  <p>You matter more than you think.</p>
 </section>
 
 <script src="script.js"></script>
