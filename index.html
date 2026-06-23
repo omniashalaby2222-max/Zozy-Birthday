@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Zozy 💙</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="stars"></div>
+<div id="fireworks"></div>
+
+<!-- INTRO -->
+<section class="screen active">
+  <h1>ZOZY 💙</h1>
+  <p>Six birthdays. One love. Infinite memories.</p>
+  <button onclick="nextScreen()">Begin Experience</button>
+</section>
+
+<!-- NAME -->
+<section class="screen">
+  <h2>Enter your name 💌</h2>
+  <input id="name" placeholder="Type your name">
+  <button onclick="openExperience()">Open</button>
+</section>
+
+<!-- MESSAGE -->
+<section class="screen">
+  <h1 id="title"></h1>
+
+  <p class="fade">Since 17/01/2021...</p>
+  <p class="fade delay1">Every moment became a memory.</p>
+  <p class="fade delay2">And every memory became love.</p>
+
+  <button onclick="nextScreen()">Continue</button>
+</section>
+
+<!-- CAKE -->
+<section class="screen">
+  <div class="cake">
+    <div class="candle"></div>
+    <div class="flame"></div>
+  </div>
+
+  <h2>Make a wish 💙</h2>
+  <button onclick="fireworks()">Blow Candle 🎆</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
