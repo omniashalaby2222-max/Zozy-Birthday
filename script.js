@@ -1,52 +1,55 @@
 let screens = document.querySelectorAll(".screen");
 let current = 0;
 
-function showScreen(i){
+function show(i){
   screens.forEach(s => s.classList.remove("active"));
   screens[i].classList.add("active");
+  current = i;
 }
 
-function nextScreen(){
-  current++;
-  if(current < screens.length){
-    showScreen(current);
+/* 🔥 safe navigation */
+function go(i){
+  if(i >= screens.length) return;
+  show(i);
+}
+
+/* 💙 wish scene (safe + cinematic) */
+function wishScene(){
+  fireworks();
+  hearts();
+
+  setTimeout(() => {
+    go(5);
+  }, 900);
+}
+
+/* 💙 hearts */
+function hearts(){
+  const c = document.getElementById("hearts");
+
+  for(let i=0;i<25;i++){
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "💙";
+    h.style.left = Math.random()*100 + "vw";
+    h.style.top = "100vh";
+
+    c.appendChild(h);
+    setTimeout(()=>h.remove(), 4000);
   }
 }
 
-function openExperience(){
-  let name = document.getElementById("name").value;
-
-  document.getElementById("title").innerText =
-  "Happy Birthday " + name + " 💙";
-
-  createStars();
-  nextScreen();
-}
-
-/* stars */
-function createStars(){
-  for(let i=0;i<100;i++){
-    let s = document.createElement("div");
-    s.className="star";
-    s.style.left=Math.random()*100+"vw";
-    s.style.top=Math.random()*100+"vh";
-    document.body.appendChild(s);
-  }
-}
-
-/* fireworks */
+/* 🎆 fireworks */
 function fireworks(){
-  document.getElementById("fireworks").innerHTML = "";
+  const c = document.getElementById("fx");
 
   for(let i=0;i<50;i++){
-    let f = document.createElement("div");
-    f.className="firework";
-    f.style.left=Math.random()*100+"vw";
-    f.style.top=Math.random()*100+"vh";
+    let d = document.createElement("div");
+    d.className = "fx-dot";
+    d.style.left = Math.random()*100 + "vw";
+    d.style.top = Math.random()*100 + "vh";
 
-    let colors = ["#7cc7ff","#ffffff","#c8a27a","#a7d8ff"];
-    f.style.background = colors[Math.floor(Math.random()*colors.length)];
-
-    document.getElementById("fireworks").appendChild(f);
+    c.appendChild(d);
+    setTimeout(()=>d.remove(), 1000);
   }
 }
