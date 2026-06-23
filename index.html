@@ -2,57 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>A Small Story For You 💙</title>
+<title>For You 💙</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div id="hearts"></div>
-<div id="fireworks"></div>
+<div id="fx"></div>
 
-<!-- SCENE 1 -->
+<!-- 1 -->
 <section class="screen active">
   <h1>Hey you 💙</h1>
-  <p>This is not just a birthday page…</p>
-  <button onclick="nextScreen()">Start</button>
+  <p>This is not just a page…</p>
+  <button onclick="go(1)">Start</button>
 </section>
 
-<!-- SCENE 2 -->
+<!-- 2 -->
 <section class="screen">
-  <h2>I just wanted to tell you something...</h2>
-  <p>Some people come and change the meaning of days.</p>
-  <button onclick="nextScreen()">Continue</button>
+  <h2>A small truth...</h2>
+  <p>Some people change how days feel.</p>
+  <button onclick="go(2)">Continue</button>
 </section>
 
-<!-- SCENE 3 -->
+<!-- 3 -->
 <section class="screen">
   <h2>Since 17/01/2021 💫</h2>
-  <p>Everything started to feel different.</p>
-  <p>You became my calm in chaos.</p>
-  <button onclick="nextScreen()">Keep going</button>
+  <p>You became part of something calm in me.</p>
+  <button onclick="go(3)">Keep going</button>
 </section>
 
-<!-- SCENE 4 -->
+<!-- 4 -->
 <section class="screen">
-  <h2>And honestly...</h2>
-  <p>You are not just a memory.</p>
-  <p>You are my favorite feeling.</p>
-  <button onclick="nextScreen()">...</button>
+  <h2>Honestly...</h2>
+  <p>You feel like home.</p>
+  <button onclick="go(4)">Next</button>
 </section>
 
-<!-- SCENE 5 -->
+<!-- 5 -->
 <section class="screen">
   <h2>Make a wish 💙</h2>
   <p>Close your eyes for a second...</p>
-  <button onclick="fireworks(); hearts(); nextScreen()">Open your wish 🎆</button>
+  <button onclick="wishScene()">Open your wish 🎆</button>
 </section>
 
-<!-- FINAL -->
+<!-- 6 -->
 <section class="screen">
   <h1>I hope you smile today 💙</h1>
-  <p>And every day after this one.</p>
-  <p>You matter more than you think.</p>
+  <p>More than yesterday. Less than tomorrow.</p>
+  <p>You matter.</p>
 </section>
 
 <script src="script.js"></script>
