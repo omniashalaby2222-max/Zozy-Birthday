@@ -1,52 +1,56 @@
-let screens = document.querySelectorAll(".screen");
+const screens = document.querySelectorAll(".screen");
 let current = 0;
 
-function showScreen(i){
+function show(i){
   screens.forEach(s => s.classList.remove("active"));
-  screens[i].classList.add("active");
+  if(screens[i]) screens[i].classList.add("active");
+  current = i;
 }
 
-function nextScreen(){
-  current++;
-  if(current < screens.length){
-    showScreen(current);
+function next(){
+  if(current < screens.length - 1){
+    show(current + 1);
   }
 }
 
-function openExperience(){
-  let name = document.getElementById("name").value;
+/* 💙 hearts */
+function hearts(){
+  const c = document.getElementById("hearts");
 
-  document.getElementById("title").innerText =
-  "Happy Birthday " + name + " 💙";
+  for(let i=0;i<25;i++){
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "💙";
+    h.style.left = Math.random()*100 + "vw";
+    h.style.top = "100vh";
+    h.style.fontSize = (14 + Math.random()*18) + "px";
 
-  createStars();
-  nextScreen();
-}
-
-/* stars */
-function createStars(){
-  for(let i=0;i<100;i++){
-    let s = document.createElement("div");
-    s.className="star";
-    s.style.left=Math.random()*100+"vw";
-    s.style.top=Math.random()*100+"vh";
-    document.body.appendChild(s);
+    c.appendChild(h);
+    setTimeout(()=>h.remove(), 4000);
   }
 }
 
-/* fireworks */
+/* ✨ fireworks */
 function fireworks(){
-  document.getElementById("fireworks").innerHTML = "";
+  const c = document.getElementById("fx");
 
   for(let i=0;i<50;i++){
-    let f = document.createElement("div");
-    f.className="firework";
-    f.style.left=Math.random()*100+"vw";
-    f.style.top=Math.random()*100+"vh";
+    let d = document.createElement("div");
+    d.className = "fx-dot";
+    d.style.left = Math.random()*100 + "vw";
+    d.style.top = Math.random()*100 + "vh";
 
-    let colors = ["#7cc7ff","#ffffff","#c8a27a","#a7d8ff"];
-    f.style.background = colors[Math.floor(Math.random()*colors.length)];
-
-    document.getElementById("fireworks").appendChild(f);
+    c.appendChild(d);
+    setTimeout(()=>d.remove(), 1000);
   }
+}
+
+/* 🎬 wish cinematic moment */
+function wish(){
+  hearts();
+  fireworks();
+
+  setTimeout(() => {
+    next();
+  }, 1000);
 }

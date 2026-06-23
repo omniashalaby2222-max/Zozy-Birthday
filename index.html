@@ -8,49 +8,52 @@
 
 <body>
 
+<div class="bg"></div>
 <div id="hearts"></div>
 <div id="fx"></div>
 
-<!-- 1 -->
+<!-- SCENE 1 -->
 <section class="screen active">
-  <h1>Hey you 💙</h1>
-  <p>This is not just a page…</p>
-  <button onclick="go(1)">Start</button>
+  <h1 class="fade">Hey you 💙</h1>
+  <p class="fade">This is not just a page… it’s a feeling.</p>
+  <button onclick="next()">Start</button>
 </section>
 
-<!-- 2 -->
+<!-- SCENE 2 -->
 <section class="screen">
-  <h2>A small truth...</h2>
-  <p>Some people change how days feel.</p>
-  <button onclick="go(2)">Continue</button>
+  <h2 class="fade">A small story 🤎</h2>
+  <p class="fade">Some people don’t stay in memory…</p>
+  <p class="fade">They stay in feeling.</p>
+  <button onclick="next()">Continue</button>
 </section>
 
-<!-- 3 -->
+<!-- SCENE 3 -->
 <section class="screen">
-  <h2>Since 17/01/2021 💫</h2>
-  <p>You became part of something calm in me.</p>
-  <button onclick="go(3)">Keep going</button>
+  <h2 class="fade">Since 17/01/2021 💫</h2>
+  <p class="fade">Everything became a little softer.</p>
+  <p class="fade">A little warmer.</p>
+  <button onclick="next()">Keep going</button>
 </section>
 
-<!-- 4 -->
+<!-- SCENE 4 -->
 <section class="screen">
-  <h2>Honestly...</h2>
-  <p>You feel like home.</p>
-  <button onclick="go(4)">Next</button>
+  <h2 class="fade">Honestly...</h2>
+  <p class="fade">You feel like peace in human form.</p>
+  <button onclick="next()">One more step</button>
 </section>
 
-<!-- 5 -->
+<!-- SCENE 5 -->
 <section class="screen">
-  <h2>Make a wish 💙</h2>
-  <p>Close your eyes for a second...</p>
-  <button onclick="wishScene()">Open your wish 🎆</button>
+  <h2 class="fade">Make a wish 💙</h2>
+  <p class="fade">Close your eyes for a second...</p>
+  <button onclick="wish()">Open your wish ✨</button>
 </section>
 
-<!-- 6 -->
+<!-- FINAL -->
 <section class="screen">
-  <h1>I hope you smile today 💙</h1>
-  <p>More than yesterday. Less than tomorrow.</p>
-  <p>You matter.</p>
+  <h1 class="fade">That’s it 🤎</h1>
+  <p class="fade">I just wanted you to feel something beautiful today.</p>
+  <p class="fade">You matter more than you know 💙</p>
 </section>
 
 <script src="script.js"></script>
